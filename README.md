@@ -4,17 +4,14 @@
 
 Generate clear, conventional, and context-aware commit messages with the power of AI, directly inside your editor. CommitBot analyzes your staged changes and commit history to suggest high-quality messages that match your style.
 
-![VS Code Marketplace Version](https://img.shields.io/visual-studio-marketplace/v/YOUR_PUBLISHER.commitbot?style=for-the-badge&label=Marketplace)
-![Installs](https://img.shields.io/visual-studio-marketplace/i/YOUR_PUBLISHER.commitbot?style=for-the-badge)
 
----
 
 ## Tired of writing commit messages? Let AI do the heavy lifting.
 
 CommitBot integrates seamlessly into your Git workflow, providing intelligent suggestions that save you time and improve your commit hygiene.
 
-![CommitBot Demo](https://storage.googleapis.com/aai-web-images/commitbot-demo.gif)
-*(This is a sample GIF - it's highly recommended to record your own!)_
+![CommitBot Demo](images/commitbot.gif)
+
 
 ## Features
 

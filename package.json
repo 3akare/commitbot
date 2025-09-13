@@ -3,14 +3,14 @@
   "displayName": "commitbot",
   "description": "An AI-powered commit message generator. ",
   "version": "0.1.0",
-  "publisher": "YOUR_PUBLISHER_ID_HERE", // <-- YOU MUST REPLACE THIS
+  "publisher": "3akare",
   "repository": {
     "type": "git",
-    "url": "https://github.com/YOUR_USERNAME/YOUR_REPO_NAME.git" // <-- REPLACE THIS
+    "url": "https://github.com/3akare/commitbot.git"
   },
   "icon": "images/icon.png",
   "engines": {
-    "vscode": "^1.85.0"
+    "vscode": "^1.104.0"
   },
   "categories": [
     "Other"
