@@ -1,0 +1,100 @@
+{
+  "name": "commitbot",
+  "displayName": "commitbot",
+  "description": "An AI-powered commit message generator. ",
+  "version": "0.1.0",
+  "publisher": "YOUR_PUBLISHER_ID_HERE", // <-- YOU MUST REPLACE THIS
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/YOUR_USERNAME/YOUR_REPO_NAME.git" // <-- REPLACE THIS
+  },
+  "icon": "images/icon.png",
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onCommand:commitbot.generate",
+    "onCommand:commitbot.configure"
+  ],
+  "extensionDependencies": [
+    "vscode.git"
+  ],
+  "contributes": {
+    "commands": [
+      {
+        "command": "commitbot.generate",
+        "title": "CommitBot: Generate Commit Message",
+        "icon": {
+          "light": "resources/light/icon.svg",
+          "dark": "resources/dark/icon.svg"
+        }
+      },
+      {
+        "command": "commitbot.configure",
+        "title": "CommitBot: Configure API Key / Endpoint"
+      }
+    ],
+    "menus": {
+      "scm/title": [
+        {
+          "command": "commitbot.generate",
+          "when": "scmProvider == git",
+          "group": "navigation"
+        }
+      ]
+    },
+    "configuration": {
+      "type": "object",
+      "title": "CommitBot",
+      "properties": {
+        "commitbot.provider": {
+          "type": "string",
+          "enum": [
+            "Gemini",
+            "OpenAI"
+          ],
+          "default": "Gemini",
+          "description": "The AI provider to use for generating commit messages."
+        },
+        "commitbot.endpoint": {
+          "type": "string",
+          "default": "",
+          "description": "Optional: A custom HTTP endpoint for your AI model. If left blank, the default for the selected provider will be used."
+        },
+        "commitbot.suggestionCount": {
+          "type": "number",
+          "default": 3,
+          "description": "The number of commit message suggestions to generate."
+        },
+        "commitbot.maxDiffChars": {
+          "type": "number",
+          "default": 20000,
+          "description": "Maximum number of characters from the git diff to include in the prompt."
+        }
+      }
+    }
+  },
+  "main": "./out/extension.js",
+  "scripts": {
+    "vscode:prepublish": "pnpm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "pnpm run compile && pnpm run lint",
+    "lint": "eslint src",
+    "test": "vscode-test"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.104.0",
+    "@types/mocha": "^10.0.10",
+    "@types/node": "22.x",
+    "@typescript-eslint/eslint-plugin": "^8.42.0",
+    "@typescript-eslint/parser": "^8.42.0",
+    "eslint": "^9.34.0",
+    "typescript": "^5.9.2",
+    "@vscode/test-cli": "^0.0.11",
+    "@vscode/test-electron": "^2.5.2"
+  }
+}

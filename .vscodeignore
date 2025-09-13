@@ -1,0 +1,17 @@
+.vscode/**
+.vscode-test/**
+.gitignore
+vsc-extension-quickstart.md
+**/tsconfig.json
+**/*.map
+**/webpack.config.js
+node_modules/**
+out/test/**
+
+# Lockfiles
+pnpm-lock.yaml
+yarn.lock
+package-lock.json
+
+# Linter
+.eslintrc.json
