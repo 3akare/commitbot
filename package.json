@@ -2,7 +2,7 @@
   "name": "commitbot",
   "displayName": "commitbot",
   "description": "An AI-powered commit message generator. ",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "publisher": "3akare",
   "repository": {
     "type": "git",
